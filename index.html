@@ -270,14 +270,16 @@
       <p class="eyebrow">// ready when you are</p>
       <h2>Give your customers instant, accurate answers.</h2>
       <p class="final-cta-sub">$1,500, fixed price, delivered in 21 days.</p>
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" id="contactForm" action="submit.php" method="post" novalidate>
         <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" required>
+          <input type="text" name="name" placeholder="Your name" maxlength="120" required>
           <input type="email" name="email" placeholder="Your email" required>
         </div>
-        <input type="text" name="company" placeholder="Company / website">
-        <textarea name="message" placeholder="What do you want your chatbot to handle?" rows="3"></textarea>
+        <input type="text" name="company" placeholder="Company / website" maxlength="200">
+        <textarea name="message" placeholder="What do you want your chatbot to handle?" rows="3" maxlength="4000"></textarea>
+        <input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit" class="btn-tech btn-primary-tech btn-block-tech">Get your chatbot — $1,500</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
       <p class="final-cta-secondary">Need more than a Q&amp;A bot? <a href="#" id="bookCallFinal">Book a call →</a> for the RAG + Agentic Tooling tier.</p>
     </div>

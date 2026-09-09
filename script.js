@@ -24,6 +24,41 @@ $(function () {
     }
   });
 
+  // Contact form — AJAX submit to submit.php
+  $('#contactForm').on('submit', function (e) {
+    e.preventDefault();
+    var $form = $(this);
+    var $btn = $form.find('button[type="submit"]');
+    var $status = $('#formStatus');
+    var label = $btn.text();
+
+    $btn.prop('disabled', true).text('Sending…');
+    $status.removeClass('is-error is-success').text('');
+
+    $.ajax({
+      url: $form.attr('action'),
+      method: 'POST',
+      dataType: 'json',
+      data: $form.serialize()
+    }).done(function (res) {
+      if (res && res.success) {
+        $form[0].reset();
+        $status.addClass('is-success').text(res.message || 'Thanks — I\'ll be in touch shortly.');
+      } else {
+        $status.addClass('is-error').text((res && res.message) || 'Something went wrong. Please try again.');
+      }
+    }).fail(function (xhr) {
+      var msg = 'Something went wrong. Please try again.';
+      try {
+        var r = JSON.parse(xhr.responseText);
+        if (r && r.message) { msg = r.message; }
+      } catch (err) {}
+      $status.addClass('is-error').text(msg);
+    }).always(function () {
+      $btn.prop('disabled', false).text(label);
+    });
+  });
+
   // Placeholder booking links — replace href with your Calendly link
   $('#bookCallOffer, #bookCallFinal').on('click', function (e) {
     e.preventDefault();
