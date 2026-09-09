@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furqan — Agentic AI Engineer</title>
+<meta name="description" content="Furqan builds RAG chatbots that answer customer questions using a business's own data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav" id="site-nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#top">furqan<span class="accent">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#problem" class="nav-link">Problem</a>
+      <a href="#offer" class="nav-link">Pricing</a>
+      <a href="#how" class="nav-link">Process</a>
+      <a href="#proof" class="nav-link">Demo</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contact" class="nav-link nav-cta">Get started</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">$ agentic-ai-engineer --status=available</p>
+        <h1>Furqan Dev</h1>
+        <p class="hero-title">Agentic AI Engineer</p>
+        <p class="hero-value">I build AI chatbots that answer your customers' questions instantly - using your own docs, listings, product data, and website content. No generic answers, no hallucinated pricing.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-tech btn-primary-tech">Get your chatbot — $1,500</a>
+          <a href="#offer" class="btn-tech btn-ghost-tech">See how it works ↓</a>
+        </div>
+      </div>
+      <div class="hero-diagram" aria-hidden="true">
+        <div class="diagram-card">
+          <p class="diagram-label">// how it works</p>
+          <div class="diagram-row">
+            <div class="diagram-box">
+              <span class="diagram-tag">IN</span>
+              <p>Your docs, FAQs, product data</p>
+            </div>
+            <span class="diagram-arrow">→</span>
+            <div class="diagram-box diagram-box-core">
+              <span class="diagram-tag">RAG</span>
+              <p>Retrieves the exact right answer</p>
+            </div>
+            <span class="diagram-arrow">→</span>
+            <div class="diagram-box">
+              <span class="diagram-tag">OUT</span>
+              <p>Accurate answer, instantly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <p class="section-kicker">// the problem</p>
+      <h2 class="section-title">Customers can't find what they're looking for</h2>
+      <p class="problem-sub">A buyer scrolling real estate listings, a shopper comparing products, a customer stuck on a support question — they all hit the same wall: too much to search through, no one to ask.</p>
+      <div class="problem-grid">
+        <div class="problem-item">
+          <span class="problem-index">01</span>
+          <p>A buyer wants a 3-bed under $500k near downtown, not a list of every listing.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-index">02</span>
+          <p>A shopper isn't sure which product fits them and leaves instead of guessing.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-index">03</span>
+          <p>A lead messages at 11pm, gets no answer, and buys from someone else.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-index">04</span>
+          <p>Support handles the same questions on repeat instead of the hard ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. OFFER -->
+  <section class="offer" id="offer">
+    <div class="container">
+      <p class="section-kicker">// the offer</p>
+      <h2 class="section-title">Two ways to work together</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-card-head">
+            <p class="price-name">RAG Chatbot</p>
+            <p class="price-amount">$1,500</p>
+            <p class="price-sub">Fixed price</p>
+          </div>
+          <ul class="price-list">
+            <li>Trained on your website, docs, and product data</li>
+            <li>Answers only from your content — no made-up answers</li>
+            <li>Deployed and live on your site</li>
+            <li>3 rounds of revisions included</li>
+            <li>Delivered in 21 days</li>
+          </ul>
+          <a href="#contact" class="btn-tech btn-primary-tech btn-block-tech">Get your chatbot — $1,500</a>
+        </div>
+        <div class="price-card price-card-featured">
+          <div class="price-card-head">
+            <p class="price-name">RAG + Agentic Tooling</p>
+            <p class="price-amount">Custom</p>
+            <p class="price-sub">Scoped to your workflows</p>
+          </div>
+          <ul class="price-list">
+            <li>Everything in the RAG Chatbot tier</li>
+            <li>Books appointments and checks order status</li>
+            <li>Triggers workflows and connects to your CRM</li>
+            <li>Integrates with internal tools and APIs</li>
+            <li>Scoped and quoted after a short call</li>
+          </ul>
+          <a href="#contact" class="btn-tech btn-outline-tech btn-block-tech" id="bookCallOffer">Book a call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <p class="section-kicker">// the process</p>
+      <h2 class="section-title">From your data to a live chatbot</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <span class="how-num">01</span>
+          <p class="how-title">Share your data</p>
+          <p class="how-desc">Send your docs, FAQs, product pages, or website — whatever your customers already ask about.</p>
+        </div>
+        <div class="how-step">
+          <span class="how-num">02</span>
+          <p class="how-title">Build &amp; train</p>
+          <p class="how-desc">I set up the retrieval pipeline so the chatbot only answers from your content.</p>
+        </div>
+        <div class="how-step">
+          <span class="how-num">03</span>
+          <p class="how-title">Test &amp; refine</p>
+          <p class="how-desc">We run it against real questions and tighten up any weak answers before launch.</p>
+        </div>
+        <div class="how-step">
+          <span class="how-num">04</span>
+          <p class="how-title">Go live</p>
+          <p class="how-desc">The chatbot goes live on your site, answering customers around the clock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROOF -->
+  <section class="proof" id="proof">
+    <div class="container">
+      <p class="section-kicker">// see it work</p>
+      <h2 class="section-title">Try it yourself</h2>
+      <p class="proof-sub">This is a live chatbot, trained on this page. Ask it anything about pricing, timeline, or how it works.</p>
+      <div class="proof-grid">
+        <div class="demo-widget">
+          <div class="demo-widget-bar">
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-dot"></span>
+            <span class="demo-widget-title">chatbot — live demo</span>
+          </div>
+          <div class="demo-widget-body" id="demoWidgetSlot">
+            <p class="demo-placeholder">// embed your live chatbot widget here</p>
+          </div>
+        </div>
+        <div class="case-study">
+          <p class="case-kicker">Case study</p>
+          <p class="case-metric"><span class="accent">62%</span> fewer repeat support tickets</p>
+          <p class="case-desc">An e-commerce store deployed a RAG chatbot trained on its shipping, returns, and sizing docs. Within a month, repeat questions to human support dropped by more than half.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-photo" aria-hidden="true">
+        <img src="assets/furqan-headshot.jpeg" alt="" class="photo-headshot">
+      </div>
+      <div class="about-copy">
+        <p class="section-kicker">// about</p>
+        <h2 class="section-title">I'm Furqan.</h2>
+        <p class="about-text">I build agentic AI systems for businesses that want their customer conversations handled well, not just automated. My stack is the Claude API for language understanding, n8n for orchestration, and custom retrieval pipelines for grounding answers in your actual data.</p>
+        <p class="about-text">Before this, I worked on production ML and backend systems — so the chatbots I build are built to run reliably, not just demo well.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <p class="section-kicker">// faq</p>
+      <h2 class="section-title">Questions, answered</h2>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What data do you need from me?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Whatever your customers already ask about — your website, help docs, FAQs, product pages, or PDFs. If it's written down somewhere, I can usually use it. No clean formatting required.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How long does it take?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>21 days from when I have your data, for the $1,500 tier. Custom agentic builds take longer, depending on how many systems they connect to — we'll scope that on a call.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What if I need changes after launch?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The $1,500 tier includes 3 rounds of revisions before launch. After that, small content updates are quick and low-cost; if your product or docs change a lot, I can set up a simple way for you to update the chatbot's knowledge yourself.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is my data secure?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Your data is only used to build your chatbot and isn't shared or reused for anyone else's project. We can sign an NDA before you send anything sensitive.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens if I need more than the $1,500 tier covers?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>That's exactly what the RAG + Agentic Tooling tier is for — booking appointments, checking order status, triggering workflows, or connecting to your CRM. We scope and quote it on a call once I understand what you need it to do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FINAL CTA -->
+  <section class="final-cta" id="contact">
+    <div class="container final-cta-inner">
+      <p class="eyebrow">// ready when you are</p>
+      <h2>Give your customers instant, accurate answers.</h2>
+      <p class="final-cta-sub">$1,500, fixed price, delivered in 21 days.</p>
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+        </div>
+        <input type="text" name="company" placeholder="Company / website">
+        <textarea name="message" placeholder="What do you want your chatbot to handle?" rows="3"></textarea>
+        <button type="submit" class="btn-tech btn-primary-tech btn-block-tech">Get your chatbot — $1,500</button>
+      </form>
+      <p class="final-cta-secondary">Need more than a Q&amp;A bot? <a href="#" id="bookCallFinal">Book a call →</a> for the RAG + Agentic Tooling tier.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>furqan<span class="accent">.</span> — Agentic AI Engineer</p>
+    <p class="footer-meta">Built with the Claude API, n8n &amp; agentic RAG.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
