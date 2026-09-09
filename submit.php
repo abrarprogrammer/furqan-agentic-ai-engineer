@@ -51,7 +51,12 @@ if ($errors) {
     respond(422, false, 'Please provide ' . implode(' and ', $errors) . '.');
 }
 
-$config = require __DIR__ . '/config.php';
+$configPath = __DIR__ . '/config.local.php';
+if (!is_file($configPath)) {
+    error_log('[submit.php] missing config.local.php (copy config.example.php)');
+    respond(500, false, 'Server is not configured yet. Please email me directly.');
+}
+$config = require $configPath;
 require __DIR__ . '/lib/SmtpMailer.php';
 require __DIR__ . '/lib/email_templates.php';
 

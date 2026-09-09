@@ -1,7 +1,8 @@
 <?php
 /**
- * SMTP + recipient configuration.
- * Replace the placeholder values with your real SMTP credentials before deploying.
+ * SMTP + recipient configuration — template.
+ * Copy this file to config.local.php and fill in real values.
+ * config.local.php is gitignored and is what submit.php actually loads.
  */
 return [
     'smtp' => [
