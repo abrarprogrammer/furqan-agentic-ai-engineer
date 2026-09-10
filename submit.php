@@ -51,7 +51,7 @@ if ($errors) {
     respond(422, false, 'Please provide ' . implode(' and ', $errors) . '.');
 }
 
-$configPath = __DIR__ . '/config.local.php';
+$configPath = __DIR__ . '/config.php';
 if (!is_file($configPath)) {
     error_log('[submit.php] missing config.local.php (copy config.example.php)');
     respond(500, false, 'Server is not configured yet. Please email me directly.');
