@@ -1,6 +1,6 @@
 // reCAPTCHA v3 site key — public by design, safe to hardcode client-side.
 // Get one at https://www.google.com/recaptcha/admin/create (register furqandev.com).
-var RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_V3_SITE_KEY';
+var RECAPTCHA_SITE_KEY = '6LfTkbktAAAAAAezzJo0cGYPYcRPmywUk9QS_RI7';
 
 $(function () {
   // Mobile nav toggle
