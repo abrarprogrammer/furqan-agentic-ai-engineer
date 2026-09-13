@@ -523,6 +523,15 @@ img { max-width: 100%; display: block; }
 }
 .form-status.is-success { color: var(--accent); }
 .form-status.is-error { color: oklch(0.70 0.17 25); }
+.recaptcha-disclosure {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+.recaptcha-disclosure a { color: var(--text-faint); text-decoration: underline; }
+.recaptcha-disclosure a:hover { color: var(--text-dim); }
 .final-cta-secondary { color: var(--text-dim); font-size: 15px; margin-top: 24px; }
 
 /* ===== Footer ===== */

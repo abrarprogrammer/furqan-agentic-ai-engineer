@@ -285,6 +285,7 @@
         <input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button type="submit" class="btn-tech btn-primary-tech btn-block-tech">Get your chatbot — $1,500</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="recaptcha-disclosure">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
       </form>
       <p class="final-cta-secondary">Need more than a Q&amp;A bot? <a href="#" id="bookCallFinal">Book a call →</a> for the RAG + Agentic Tooling tier.</p>
     </div>
@@ -301,6 +302,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- reCAPTCHA v3 — site key must match RECAPTCHA_SITE_KEY in script.js -->
+<script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_V3_SITE_KEY"></script>
 <script src="chat-widget.js"></script>
 <script src="script.js"></script>
 </body>

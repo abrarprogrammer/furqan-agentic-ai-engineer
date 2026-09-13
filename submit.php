@@ -27,10 +27,11 @@ if (!empty($_POST['_hp'] ?? '')) {
     respond(200, true, 'Thanks, I\'ll be in touch shortly.');
 }
 
-$name    = trim((string) ($_POST['name'] ?? ''));
-$email   = trim((string) ($_POST['email'] ?? ''));
-$company = trim((string) ($_POST['company'] ?? ''));
-$message = trim((string) ($_POST['message'] ?? ''));
+$name           = trim((string) ($_POST['name'] ?? ''));
+$email          = trim((string) ($_POST['email'] ?? ''));
+$company        = trim((string) ($_POST['company'] ?? ''));
+$message        = trim((string) ($_POST['message'] ?? ''));
+$recaptchaToken = trim((string) ($_POST['recaptcha_token'] ?? ''));
 
 $errors = [];
 if ($name === '' || mb_strlen($name) > 120) {
@@ -59,6 +60,13 @@ if (!is_file($configPath)) {
 $config = require $configPath;
 require __DIR__ . '/lib/SmtpMailer.php';
 require __DIR__ . '/lib/email_templates.php';
+require __DIR__ . '/lib/recaptcha.php';
+
+$rc = verify_recaptcha($recaptchaToken, $_SERVER['REMOTE_ADDR'] ?? '', $config['recaptcha'] ?? []);
+if (!$rc['ok']) {
+    error_log('[submit.php] recaptcha rejected: ' . $rc['reason'] . ' (score ' . $rc['score'] . ')');
+    respond(400, false, 'Verification failed. Please refresh the page and try again.');
+}
 
 $data = [
     'name'    => $name,

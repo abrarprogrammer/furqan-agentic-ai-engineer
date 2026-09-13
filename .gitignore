@@ -1,4 +1,5 @@
 .DS_Store
 .preview/
 .thumbnail
+config.php
 config.local.php
