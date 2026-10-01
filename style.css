@@ -459,6 +459,30 @@ img { max-width: 100%; display: block; }
 }
 .about-text { color: var(--text-dim); font-size: 17px; line-height: 1.65; margin-top: 18px; max-width: 560px; }
 
+/* ===== Instagram ===== */
+.instagram { padding: 90px 0; border-top: 1px solid var(--border-soft); }
+.instagram-sub { color: var(--text-dim); font-size: 17px; max-width: 560px; margin-top: -28px; margin-bottom: 44px; }
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.instagram-embed {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 600px;
+}
+.instagram-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.instagram-follow { display: inline-flex; }
+
 /* ===== FAQ ===== */
 .faq { padding: 90px 0; border-top: 1px solid var(--border-soft); }
 .faq-list { max-width: 720px; }
@@ -554,6 +578,8 @@ img { max-width: 100%; display: block; }
   .proof-grid { grid-template-columns: 1fr; }
   .about-inner { grid-template-columns: 1fr; }
   .about-photo { width: 160px; }
+  .instagram-grid { grid-template-columns: 1fr; }
+  .instagram-embed { height: 560px; max-width: 420px; margin: 0 auto; }
 }
 @media (max-width: 720px) {
   .nav-toggle { display: flex; }
@@ -577,4 +603,5 @@ img { max-width: 100%; display: block; }
   .how-steps { grid-template-columns: 1fr; }
   .form-row { flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+  .instagram-embed { height: 520px; max-width: none; }
 }
