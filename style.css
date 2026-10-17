@@ -337,6 +337,7 @@ img { max-width: 100%; display: block; }
 .capacity { margin: 24px 0 0; font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
 
 .calc { padding: 90px 0; border-top: 1px solid var(--border-soft); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
 .calc-form, .calc-result { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
 .calc-form { display: flex; flex-direction: column; gap: 26px; }
 .calc-form { gap: 26px; }
