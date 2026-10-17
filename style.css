@@ -541,6 +541,10 @@ img { max-width: 100%; display: block; }
 .pilot-title { color: var(--text); font-weight: 700; margin-bottom: 6px; }
 .pilot-link { display: inline-block; margin-top: 10px; font-weight: 600; }
 
+.testimonial { margin: 0; color: var(--text-dim); font-size: 15px; line-height: 1.6; display: flex; flex-direction: column; gap: 12px; }
+.testimonial footer { margin-top: 4px; }
+.hero-proof a { text-decoration: underline; text-underline-offset: 3px; }
+
 /* ===== About ===== */
 .about { padding: 90px 0; border-top: 1px solid var(--border-soft); }
 .about-inner { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
