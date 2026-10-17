@@ -95,6 +95,23 @@ $(function () {
     }
   });
 
+  // Lost-leads calculator (front-end only, no network calls)
+  function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+  function num(id) { var v = parseFloat($(id).val()); return isNaN(v) || v < 0 ? 0 : v; }
+  function updateCalc() {
+    var leads = num('#calcLeads');
+    var missed = Math.min(num('#calcMissed'), 100) / 100;
+    var close = Math.min(num('#calcClose'), 100) / 100;
+    var value = num('#calcValue');
+    var lostLeads = leads * missed;
+    var monthly = lostLeads * close * value;
+    $('#calcMonth').text(fmt(monthly));
+    $('#calcYear').text(fmt(monthly * 12));
+    $('#calcDetail').text(Math.round(lostLeads) + ' unanswered enquiries a month. The chatbot is a one-time $699.');
+  }
+  $('#lossCalc input').on('input', updateCalc);
+  updateCalc();
+
   // Chat starter chips — fill the chat input and submit through the widget's own form handler
   $('#chatChips').on('click', '.chat-chip', function () {
     var $input = $('#chatInput');

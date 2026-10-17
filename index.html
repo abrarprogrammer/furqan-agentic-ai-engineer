@@ -120,68 +120,93 @@
     </div>
   </section>
 
+  <!-- 3b. LOSS CALCULATOR -->
+  <section class="calc" id="calculator">
+    <div class="container">
+      <p class="section-kicker">// the cost</p>
+      <h2 class="section-title">What are unanswered leads costing you?</h2>
+      <p class="problem-sub">Enter your own numbers. The values below are examples only.</p>
+      <div class="calc-grid">
+        <form class="calc-form" id="lossCalc" onsubmit="return false">
+          <label>Website enquiries per month
+            <input type="number" id="calcLeads" min="0" step="1" value="100" inputmode="numeric"></label>
+          <label>% that go unanswered (after hours, slow replies)
+            <input type="number" id="calcMissed" min="0" max="100" step="1" value="40" inputmode="numeric"></label>
+          <label>% of answered enquiries that become clients
+            <input type="number" id="calcClose" min="0" max="100" step="0.1" value="2" inputmode="decimal"></label>
+          <label>Average value of a client ($)
+            <input type="number" id="calcValue" min="0" step="100" value="9000" inputmode="numeric"></label>
+        </form>
+        <div class="calc-result" aria-live="polite">
+          <p class="calc-label">You may be losing</p>
+          <p class="calc-big"><span id="calcMonth">$0</span><span class="calc-unit"> / month</span></p>
+          <p class="calc-year"><span id="calcYear">$0</span> per year</p>
+          <p class="calc-detail" id="calcDetail"></p>
+          <a href="#contact" class="btn-tech btn-primary-tech">Stop the loss: get a free demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 4. OFFER -->
   <!-- Offer name: "The 11pm Lead Catcher" (chosen by owner) -->
   <section class="offer" id="offer">
     <div class="container">
       <p class="section-kicker">// the offer</p>
-      <h2 class="section-title">Two ways to work together</h2>
-      <div class="free-demo">
-        <p class="free-demo-tag">Start here, free</p>
-        <h3>Free demo, built on your own site</h3>
-        <div class="free-demo-steps">
-          <div><span class="how-num">Step 1</span><p>I build a working demo chatbot trained on about 30% of the data on your site. It costs you nothing, and you get it within 48 hours.</p></div>
-          <div><span class="how-num">Step 2</span><p>You test it with your own questions. Once you're confident it works, I build the full paid version.</p></div>
-        </div>
-      </div>
-      <p class="capacity">I take 5 new builds per month.</p>
+      <h2 class="section-title">Start free, pay only if you love it</h2>
       <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-card-head">
+            <p class="price-name">Step 1: Free demo</p>
+            <p class="price-amount">$0</p>
+            <p class="price-sub">Delivered within 48 hours</p>
+          </div>
+          <ul class="price-list">
+            <li>A working chatbot trained on about 30% of your site's data</li>
+            <li>Test it with your own questions</li>
+            <li>No payment, no commitment</li>
+          </ul>
+          <a href="#contact" class="btn-tech btn-outline-tech btn-block-tech">Get a free demo</a>
+        </div>
         <div class="price-card price-card-featured">
           <span class="price-tag">Most popular</span>
           <div class="price-card-head">
-            <p class="price-name">The 11pm Lead Catcher</p>
+            <p class="price-name">Step 2: The 11pm Lead Catcher</p>
             <p class="price-amount"><s class="price-was" aria-label="Regular price $1,500">$1,500</s> <span class="price-now">$699</span></p>
-            <p class="price-sub">24/7 buyer-answer chatbot for real-estate websites · fixed price · live in 7 days</p>
+            <p class="price-sub">Fixed price · live in 7 days</p>
           </div>
           <ul class="price-list">
-            <li>Trained on your listings, website, docs and FAQs</li>
+            <li>Trained on all your listings, website, docs and FAQs</li>
             <li>Answers only from your content, so no made-up answers</li>
             <li>Installed and live on your site</li>
             <li>3 rounds of revisions included</li>
-            <li>Delivered in 7 days</li>
+            <li>You only send your data. I do everything else</li>
+            <li>Bonus: "Top 20 Questions Your Customers Ask" report</li>
           </ul>
-          <div class="not-do">
-            <p class="not-do-title">What you don't have to do</p>
-            <p>Your only job is to send your data (links, PDFs, FAQs, listing info). I handle the setup, training, testing, install and launch. No tech work, no prompt writing, no chasing a developer.</p>
-          </div>
-          <div class="bonus">
-            <p class="bonus-title">Bonus: "Top 20 Questions Your Customers Ask"</p>
-            <p>A short report built from the data you send me, showing the questions your content answers best and the gaps worth fixing.</p>
-          </div>
-          <a href="#contact" class="btn-tech btn-primary-tech btn-block-tech">Get my free demo</a>
+          <a href="#contact" class="btn-tech btn-primary-tech btn-block-tech">Start with the free demo</a>
         </div>
         <div class="price-card">
           <div class="price-card-head">
-            <p class="price-name">RAG + Agentic Tooling</p>
+            <p class="price-name">Need more? RAG + Agentic Tooling</p>
             <p class="price-amount">Custom</p>
             <p class="price-sub">Scoped to your workflows</p>
           </div>
           <ul class="price-list">
             <li>Everything in The 11pm Lead Catcher</li>
-            <li>Books appointments and checks order status</li>
-            <li>Triggers workflows and connects to your CRM</li>
-            <li>Integrates with internal tools and APIs</li>
-            <li>Scoped and quoted after a short call</li>
+            <li>Books appointments, checks order status</li>
+            <li>Connects to your CRM and internal tools</li>
+            <li>Quoted after a short call</li>
           </ul>
           <a href="#contact" class="btn-tech btn-outline-tech btn-block-tech" id="bookCallOffer">Book a call</a>
         </div>
       </div>
+      <p class="capacity">I take 5 new builds per month.</p>
 
       <div class="guarantee">
         <div class="guarantee-badge" aria-hidden="true">✓</div>
         <div>
           <p class="guarantee-title">The 11pm Lead Catcher guarantee</p>
-          <p class="guarantee-big">We test 50 of your real customer questions at launch. If it doesn't answer at least 90% correctly, I keep fixing it free until it does, or you get a refund.</p>
+          <p class="guarantee-big">I test 50 of your real customer questions at launch. If it doesn't answer at least 90% correctly, I keep fixing it free until it does, or you get a refund.</p>
           <p class="guarantee-note">You don't pay for a chatbot that can't do the job.</p>
         </div>
       </div>
@@ -235,7 +260,7 @@
             <p>Furqan built exactly what we needed: a RAG-based chatbot that answers questions straight from our website content and knowledge base, not generic scripted replies. He set up the full retrieval pipeline, embeddings, vector search. The bot stays accurate to our actual business info instead of hallucinating answers.</p>
             <p>Integration into our site was clean, and he tested thoroughly before launch to make sure responses held up under real customer questions. Communication was clear throughout, and he explained his approach (vector DB, retrieval logic) without overcomplicating things.</p>
             <p>If you need a reliable AI/LLM chatbot that actually understands your business, Furqan is the one to hire. Will absolutely work with him again.</p>
-            <footer><span class="confirm">[CONFIRM: client name, role and company to credit, plus permission to publish]</span></footer>
+            <footer>— WiseWorkman</footer>
           </blockquote>
         </div>
       </div>

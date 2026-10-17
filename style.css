@@ -237,7 +237,7 @@ img { max-width: 100%; display: block; }
 .offer { padding: 90px 0; border-top: 1px solid var(--border-soft); }
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 .price-card {
@@ -334,7 +334,24 @@ img { max-width: 100%; display: block; }
 .free-demo-steps .how-num { display: block; margin-bottom: 4px; }
 .price-was { color: var(--text-faint); font-size: 28px; font-weight: 600; margin-right: 8px; }
 .price-now { color: var(--accent); }
-.capacity { margin: 0 0 20px; font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
+.capacity { margin: 24px 0 0; font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
+
+.calc { padding: 90px 0; border-top: 1px solid var(--border-soft); }
+.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+.calc-form, .calc-result { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+.calc-form { display: flex; flex-direction: column; gap: 18px; }
+.calc-form label { display: flex; flex-direction: column; gap: 6px; font-size: 15px; color: var(--text-dim); }
+.calc-form input {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--text); font-family: var(--font-mono); font-size: 16px; padding: 12px 14px; min-height: 44px; width: 100%;
+}
+.calc-form input:focus { outline: none; border-color: var(--accent); }
+.calc-result { border-color: var(--accent); display: flex; flex-direction: column; justify-content: center; gap: 6px; }
+.calc-label { font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
+.calc-big { font-size: clamp(36px, 5vw, 52px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.calc-unit { font-size: 18px; font-weight: 600; color: var(--text-dim); }
+.calc-year { font-size: 20px; font-weight: 700; }
+.calc-detail { color: var(--text-dim); font-size: 15px; margin: 8px 0 18px; }
 
 /* ===== How it works ===== */
 .how { padding: 90px 0; border-top: 1px solid var(--border-soft); }
@@ -668,7 +685,8 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-card { justify-self: start; max-width: 260px; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 36px; }
+  .calc-grid { grid-template-columns: 1fr; }
   .how-steps { grid-template-columns: repeat(2, 1fr); }
   .proof-grid { grid-template-columns: 1fr; }
   .about-inner { grid-template-columns: 1fr; }
@@ -699,7 +717,7 @@ img { max-width: 100%; display: block; }
   .problem-grid { grid-template-columns: 1fr; }
   .how-steps { grid-template-columns: 1fr; }
   .price-card { padding: 28px 22px; }
-  .guarantee, .testimonial-slot { padding: 22px; }
+  .guarantee, .testimonial-slot, .calc-form, .calc-result { padding: 22px; }
   .guarantee { flex-direction: column; gap: 14px; }
   .free-demo { padding: 22px; }
   .instagram-embed { height: 520px; max-width: none; }
