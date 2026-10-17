@@ -105,6 +105,10 @@ $(function () {
     var value = num('#calcValue');
     var lostLeads = leads * missed;
     var monthly = lostLeads * close * value;
+    $('#outLeads').text(leads.toLocaleString('en-US'));
+    $('#outMissed').text(Math.round(missed * 100) + '%');
+    $('#outClose').text((close * 100).toFixed(1).replace('.0', '') + '%');
+    $('#outValue').text(fmt(value));
     $('#calcMonth').text(fmt(monthly));
     $('#calcYear').text(fmt(monthly * 12));
     $('#calcDetail').text(Math.round(lostLeads) + ' unanswered enquiries a month. The chatbot is a one-time $699.');

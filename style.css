@@ -337,15 +337,22 @@ img { max-width: 100%; display: block; }
 .capacity { margin: 24px 0 0; font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
 
 .calc { padding: 90px 0; border-top: 1px solid var(--border-soft); }
-.calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
 .calc-form, .calc-result { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
-.calc-form { display: flex; flex-direction: column; gap: 18px; }
-.calc-form label { display: flex; flex-direction: column; gap: 6px; font-size: 15px; color: var(--text-dim); }
-.calc-form input {
-  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
-  color: var(--text); font-family: var(--font-mono); font-size: 16px; padding: 12px 14px; min-height: 44px; width: 100%;
+.calc-form { display: flex; flex-direction: column; gap: 26px; }
+.calc-form { gap: 26px; }
+.calc-row label { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; font-size: 15px; color: var(--text-dim); margin-bottom: 8px; }
+.calc-row output { font-family: var(--font-mono); font-size: 17px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.calc-row input[type=range] {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; cursor: pointer; padding: 0; border: 0;
 }
-.calc-form input:focus { outline: none; border-color: var(--accent); }
+.calc-row input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: var(--border); }
+.calc-row input[type=range]::-moz-range-track { height: 6px; border-radius: 3px; background: var(--border); }
+.calc-row input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 26px; height: 26px; margin-top: -10px; border-radius: 50%;
+  background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--accent);
+}
+.calc-row input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); }
+.calc-row input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .calc-result { border-color: var(--accent); display: flex; flex-direction: column; justify-content: center; gap: 6px; }
 .calc-label { font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
 .calc-big { font-size: clamp(36px, 5vw, 52px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
