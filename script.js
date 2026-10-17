@@ -95,9 +95,12 @@ $(function () {
     }
   });
 
-  // Placeholder booking links — replace href with your Calendly link
-  $('#bookCallOffer, #bookCallFinal').on('click', function (e) {
-    e.preventDefault();
-    alert('Add your Calendly link to #bookCallOffer / #bookCallFinal in index.html');
+  // Chat starter chips — fill the chat input and submit through the widget's own form handler
+  $('#chatChips').on('click', '.chat-chip', function () {
+    var $input = $('#chatInput');
+    if ($input.prop('disabled')) { return; }
+    $input.val($(this).data('q'));
+    $('#chatChips').prop('hidden', true);
+    $('#chatForm').trigger('submit');
   });
 });

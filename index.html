@@ -13,6 +13,11 @@
 </head>
 <body>
 
+<!--
+  DRAFT: draft-offer-redesign. Every <span class="confirm"> is a placeholder the owner must resolve
+  before this goes live. Search for "CONFIRM" to list them all.
+-->
+
 <nav class="site-nav" id="site-nav">
   <div class="container nav-inner">
     <a class="nav-brand" href="#top">furqan<span class="accent">.</span></a>
@@ -20,14 +25,13 @@
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links" id="navLinks">
-      <a href="#problem" class="nav-link">Problem</a>
+      <a href="#demo" class="nav-link">Live demo</a>
       <a href="#offer" class="nav-link">Pricing</a>
       <a href="#how" class="nav-link">Process</a>
-      <a href="#proof" class="nav-link">Demo</a>
+      <a href="#proof" class="nav-link">Proof</a>
       <a href="#about" class="nav-link">About</a>
-      <a href="#instagram" class="nav-link">Instagram</a>
       <a href="#faq" class="nav-link">FAQ</a>
-      <a href="#contact" class="nav-link nav-cta">Get started</a>
+      <a href="#contact" class="nav-link nav-cta">Get my free demo</a>
     </div>
   </div>
 </nav>
@@ -38,95 +42,128 @@
   <section class="hero" id="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">$ agentic-ai-engineer --status=available</p>
-        <h1>Furqan Dev</h1>
-        <p class="hero-title">Agentic AI Engineer</p>
-        <p class="hero-value">I build AI chatbots that answer your customers' questions instantly - using your own docs, listings, product data, and website content. No generic answers, no hallucinated pricing.</p>
+        <p class="eyebrow">AI chatbots for real-estate websites</p>
+        <h1>A buyer asks about a listing at 11pm. Your website answers instantly, and accurately.</h1>
+        <p class="hero-sub">Furqan, Agentic AI Engineer</p>
+        <p class="hero-value">I build a chatbot trained on your own listings, neighborhood info and FAQs, so buyers get a right answer in seconds instead of leaving for the next site. It only answers from your content, so no made-up prices or details.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn-tech btn-primary-tech">Get your chatbot — $1,500</a>
-          <a href="#offer" class="btn-tech btn-ghost-tech">See how it works ↓</a>
+          <a href="#contact" class="btn-tech btn-primary-tech">Get a free demo on my site</a>
+          <a href="#offer" class="btn-tech btn-ghost-tech">Or see the $1,500 build</a>
         </div>
+        <p class="hero-how"><a href="#how">See how it works ↓</a></p>
+        <p class="hero-proof">
+          <span class="accent" aria-hidden="true">✓</span>
+          Test a live chatbot right below before you decide.
+          <span class="confirm">[CONFIRM: add one real proof point here, e.g. a named client, a result, or years building chatbots]</span>
+        </p>
       </div>
-      <div class="hero-diagram" aria-hidden="true">
-        <div class="diagram-card">
-          <p class="diagram-label">// how it works</p>
-          <div class="diagram-row">
-            <div class="diagram-box">
-              <span class="diagram-tag">IN</span>
-              <p>Your docs, FAQs, product data</p>
-            </div>
-            <span class="diagram-arrow">→</span>
-            <div class="diagram-box diagram-box-core">
-              <span class="diagram-tag">RAG</span>
-              <p>Retrieves the exact right answer</p>
-            </div>
-            <span class="diagram-arrow">→</span>
-            <div class="diagram-box">
-              <span class="diagram-tag">OUT</span>
-              <p>Accurate answer, instantly</p>
-            </div>
-          </div>
+      <div class="hero-card">
+        <img src="assets/furqan-headshot.jpeg" alt="Portrait of Furqan, Agentic AI Engineer" class="hero-headshot" width="1024" height="1024">
+        <div class="hero-card-meta">
+          <p class="hero-card-name">Furqan</p>
+          <p class="hero-card-role">Agentic AI Engineer</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. PROBLEM -->
+  <!-- 2. LIVE DEMO (moved up under the hero) -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <p class="section-kicker">// see it work</p>
+      <h2 class="section-title">Ask it something, right now</h2>
+      <p class="demo-sub">This is a live chatbot trained on this page. Tap a question or type your own.</p>
+      <div class="demo-widget">
+        <div class="demo-widget-bar">
+          <span class="demo-dot"></span>
+          <span class="demo-dot"></span>
+          <span class="demo-dot"></span>
+          <span class="demo-widget-title">chatbot — live demo</span>
+        </div>
+        <div class="demo-widget-body chat-widget" id="chatWidget">
+          <div class="chat-log" id="chatLog" aria-live="polite"></div>
+          <div class="chat-chips" id="chatChips" role="group" aria-label="Starter questions">
+            <button type="button" class="chat-chip" data-q="How much does it cost?">How much does it cost?</button>
+            <button type="button" class="chat-chip" data-q="How long does it take to build?">How long does it take?</button>
+            <button type="button" class="chat-chip" data-q="What data do you need from me?">What do you need from me?</button>
+          </div>
+          <form class="chat-input-row" id="chatForm" autocomplete="off">
+            <span class="chat-prompt">$</span>
+            <input type="text" id="chatInput" class="chat-input" placeholder="Ask about price or timeline…" maxlength="1000" aria-label="Message">
+            <button type="submit" class="chat-send" id="chatSend">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROBLEM -->
   <section class="problem" id="problem">
     <div class="container">
       <p class="section-kicker">// the problem</p>
-      <h2 class="section-title">Customers can't find what they're looking for</h2>
-      <p class="problem-sub">A buyer scrolling real estate listings, a shopper comparing products, a customer stuck on a support question — they all hit the same wall: too much to search through, no one to ask.</p>
+      <h2 class="section-title">Buyers leave when nobody answers</h2>
+      <p class="problem-sub">A buyer scrolling listings, a shopper comparing products, a customer stuck on a support question: they all hit the same wall. Too much to search through, and no one to ask.</p>
       <div class="problem-grid">
         <div class="problem-item">
-          <span class="problem-index">01</span>
           <p>A buyer wants a 3-bed under $500k near downtown, not a list of every listing.</p>
         </div>
         <div class="problem-item">
-          <span class="problem-index">02</span>
           <p>A shopper isn't sure which product fits them and leaves instead of guessing.</p>
         </div>
         <div class="problem-item">
-          <span class="problem-index">03</span>
           <p>A lead messages at 11pm, gets no answer, and buys from someone else.</p>
         </div>
         <div class="problem-item">
-          <span class="problem-index">04</span>
           <p>Support handles the same questions on repeat instead of the hard ones.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. OFFER -->
+  <!-- 4. OFFER -->
+  <!--
+    Offer name options (format: magnetic reason + avatar + goal + time interval):
+      A) "The 24/7 Buyer-Answer Chatbot for Real-Estate Websites, Live in 21 Days"   <-- used
+      B) "The After-Hours Lead Catcher: Instant, Accurate Answers on Your Listings Site in 21 Days"
+      C) "The Never-Miss-a-Buyer Chatbot: Your Listings Answered Around the Clock, Live in 21 Days"
+  -->
   <section class="offer" id="offer">
     <div class="container">
       <p class="section-kicker">// the offer</p>
       <h2 class="section-title">Two ways to work together</h2>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card price-card-featured">
+          <span class="price-tag">Most popular</span>
           <div class="price-card-head">
-            <p class="price-name">RAG Chatbot</p>
+            <p class="price-name">The 24/7 Buyer-Answer Chatbot for Real-Estate Websites</p>
             <p class="price-amount">$1,500</p>
-            <p class="price-sub">Fixed price</p>
+            <p class="price-sub">Fixed price · live in 21 days</p>
           </div>
           <ul class="price-list">
-            <li>Trained on your website, docs, and product data</li>
-            <li>Answers only from your content — no made-up answers</li>
-            <li>Deployed and live on your site</li>
+            <li>Trained on your listings, website, docs and FAQs</li>
+            <li>Answers only from your content, so no made-up answers</li>
+            <li>Installed and live on your site</li>
             <li>3 rounds of revisions included</li>
             <li>Delivered in 21 days</li>
           </ul>
-          <a href="#contact" class="btn-tech btn-primary-tech btn-block-tech">Get your chatbot — $1,500</a>
+          <div class="not-do">
+            <p class="not-do-title">What you don't have to do</p>
+            <p>Your only job is to send your data (links, PDFs, FAQs, listing info). I handle the setup, training, testing, install and launch. No tech work, no prompt writing, no chasing a developer.</p>
+          </div>
+          <div class="bonus">
+            <p class="bonus-title">Bonus: "Top 20 Questions Your Customers Ask"</p>
+            <p>A short report built from the data you send me, showing the questions your content answers best and the gaps worth fixing.</p>
+          </div>
+          <a href="#contact" class="btn-tech btn-primary-tech btn-block-tech">Get my free demo</a>
         </div>
-        <div class="price-card price-card-featured">
+        <div class="price-card">
           <div class="price-card-head">
             <p class="price-name">RAG + Agentic Tooling</p>
             <p class="price-amount">Custom</p>
             <p class="price-sub">Scoped to your workflows</p>
           </div>
           <ul class="price-list">
-            <li>Everything in the RAG Chatbot tier</li>
+            <li>Everything in the $1,500 chatbot</li>
             <li>Books appointments and checks order status</li>
             <li>Triggers workflows and connects to your CRM</li>
             <li>Integrates with internal tools and APIs</li>
@@ -135,10 +172,27 @@
           <a href="#contact" class="btn-tech btn-outline-tech btn-block-tech" id="bookCallOffer">Book a call</a>
         </div>
       </div>
+
+      <div class="guarantee">
+        <p class="guarantee-title">The guarantee</p>
+        <p>At launch, we test 50 of your real customer questions. If the chatbot doesn't answer at least 90% of them correctly, I keep fixing it for free until it does, or you get a refund.
+          <span class="confirm">[CONFIRM: guarantee terms — 50 questions, 90% pass mark, refund window and conditions]</span></p>
+      </div>
+
+      <div class="care-plan">
+        <div>
+          <p class="care-kicker">Optional, after launch</p>
+          <p class="care-title">Monthly care plan</p>
+          <p class="care-desc">Content updates when your listings or docs change, monitoring so nothing quietly breaks, and a monthly answer-quality report.</p>
+        </div>
+        <p class="care-price"><span class="confirm">[CONFIRM: price per month]</span></p>
+      </div>
+
+      <p class="capacity"><span class="confirm">[CONFIRM: monthly build capacity. Add a scarcity line here ONLY if it is true, e.g. "I take N new builds a month". Otherwise delete this.]</span></p>
     </div>
   </section>
 
-  <!-- 4. HOW IT WORKS -->
+  <!-- 5. PROCESS -->
   <section class="how" id="how">
     <div class="container">
       <p class="section-kicker">// the process</p>
@@ -147,17 +201,17 @@
         <div class="how-step">
           <span class="how-num">01</span>
           <p class="how-title">Share your data</p>
-          <p class="how-desc">Send your docs, FAQs, product pages, or website — whatever your customers already ask about.</p>
+          <p class="how-desc">Send your docs, FAQs, listings, or website. This is the only thing I need from you.</p>
         </div>
         <div class="how-step">
           <span class="how-num">02</span>
           <p class="how-title">Build &amp; train</p>
-          <p class="how-desc">I set up the retrieval pipeline so the chatbot only answers from your content.</p>
+          <p class="how-desc">I set it up so the chatbot only answers from your content.</p>
         </div>
         <div class="how-step">
           <span class="how-num">03</span>
           <p class="how-title">Test &amp; refine</p>
-          <p class="how-desc">We run it against real questions and tighten up any weak answers before launch.</p>
+          <p class="how-desc">We run it against real customer questions and tighten any weak answers before launch.</p>
         </div>
         <div class="how-step">
           <span class="how-num">04</span>
@@ -168,43 +222,37 @@
     </div>
   </section>
 
-  <!-- 5. PROOF -->
+  <!-- 6. PROOF -->
   <section class="proof" id="proof">
     <div class="container">
-      <p class="section-kicker">// see it work</p>
-      <h2 class="section-title">Try it yourself</h2>
-      <p class="proof-sub">This is a live chatbot, trained on this page. Ask it anything about pricing, timeline, or how it works.</p>
+      <p class="section-kicker">// proof</p>
+      <h2 class="section-title">Results from real builds</h2>
       <div class="proof-grid">
-        <div class="demo-widget">
-          <div class="demo-widget-bar">
-            <span class="demo-dot"></span>
-            <span class="demo-dot"></span>
-            <span class="demo-dot"></span>
-            <span class="demo-widget-title">chatbot — live demo</span>
-          </div>
-          <div class="demo-widget-body chat-widget" id="chatWidget">
-            <div class="chat-log" id="chatLog" aria-live="polite"></div>
-            <form class="chat-input-row" id="chatForm" autocomplete="off">
-              <span class="chat-prompt">$</span>
-              <input type="text" id="chatInput" class="chat-input" placeholder="ask about pricing, timeline, how it works…" maxlength="1000" aria-label="Message">
-              <button type="submit" class="chat-send" id="chatSend">Send</button>
-            </form>
-          </div>
-        </div>
         <div class="case-study">
           <p class="case-kicker">Case study</p>
           <p class="case-metric"><span class="accent">62%</span> fewer repeat support tickets</p>
           <p class="case-desc">An e-commerce store deployed a RAG chatbot trained on its shipping, returns, and sizing docs. Within a month, repeat questions to human support dropped by more than half.</p>
+          <p class="confirm confirm-block">[CONFIRM: is this a real client result? If not, remove this whole card. If it is, add the client name, a source, and the timeframe.]</p>
+        </div>
+        <div class="testimonial-slot">
+          <p class="case-kicker">Client testimonial</p>
+          <p class="confirm confirm-block">[CONFIRM: add a named testimonial or case study here: quote, name, role, company, and a photo or logo if you have permission.]</p>
+          <div class="pilot">
+            <p class="pilot-title">Free pilot in exchange for a testimonial</p>
+            <p>Want to be my next case study? I'll build your first chatbot free, and in return you share an honest result and a short testimonial.
+              <span class="confirm">[CONFIRM: pilot terms and how many spots, or remove]</span></p>
+            <a href="#contact" class="pilot-link">Ask about the pilot →</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. ABOUT -->
+  <!-- 7. ABOUT -->
   <section class="about" id="about">
     <div class="container about-inner">
-      <div class="about-photo" aria-hidden="true">
-        <img src="assets/furqan-headshot.jpeg" alt="" class="photo-headshot">
+      <div class="about-photo">
+        <img src="assets/furqan-headshot.jpeg" alt="Portrait of Furqan, Agentic AI Engineer" class="photo-headshot" width="1024" height="1024" loading="lazy">
       </div>
       <div class="about-copy">
         <p class="section-kicker">// about</p>
@@ -215,28 +263,7 @@
     </div>
   </section>
 
-  <!-- 6b. INSTAGRAM -->
-  <section class="instagram" id="instagram">
-    <div class="container">
-      <p class="section-kicker">// on instagram</p>
-      <h2 class="section-title">Follow the build</h2>
-      <p class="instagram-sub">Short breakdowns on RAG, agentic tooling, and what's shipping next.</p>
-      <div class="instagram-grid">
-        <div class="instagram-embed">
-          <iframe src="https://www.instagram.com/p/Dd7Aq9PDI4t/embed" loading="lazy" title="Instagram post by furqanaiengineer" allowtransparency="true"></iframe>
-        </div>
-        <div class="instagram-embed">
-          <iframe src="https://www.instagram.com/p/Dd4hCBuDGFN/embed" loading="lazy" title="Instagram post by furqanaiengineer" allowtransparency="true"></iframe>
-        </div>
-        <div class="instagram-embed">
-          <iframe src="https://www.instagram.com/p/Dd1yWnaCK5k/embed" loading="lazy" title="Instagram post by furqanaiengineer" allowtransparency="true"></iframe>
-        </div>
-      </div>
-      <a href="https://www.instagram.com/furqanaiengineer/" target="_blank" rel="noopener" class="btn-tech btn-outline-tech instagram-follow">Follow @furqanaiengineer →</a>
-    </div>
-  </section>
-
-  <!-- 7. FAQ -->
+  <!-- 8. FAQ -->
   <section class="faq" id="faq">
     <div class="container">
       <p class="section-kicker">// faq</p>
@@ -248,7 +275,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>Whatever your customers already ask about — your website, help docs, FAQs, product pages, or PDFs. If it's written down somewhere, I can usually use it. No clean formatting required.</p>
+            <p>Whatever your customers already ask about — your website, help docs, FAQs, listing details, or PDFs. If it's written down somewhere, I can usually use it. No clean formatting required.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -266,7 +293,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>The $1,500 tier includes 3 rounds of revisions before launch. After that, small content updates are quick and low-cost; if your product or docs change a lot, I can set up a simple way for you to update the chatbot's knowledge yourself.</p>
+            <p>The $1,500 tier includes 3 rounds of revisions before launch. After that, the optional monthly care plan covers content updates, monitoring and an answer-quality report. Or I can set up a simple way for you to update the chatbot's knowledge yourself.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -291,25 +318,34 @@
     </div>
   </section>
 
-  <!-- 8. FINAL CTA -->
+  <!-- 9. CONTACT -->
   <section class="final-cta" id="contact">
     <div class="container final-cta-inner">
       <p class="eyebrow">// ready when you are</p>
-      <h2>Give your customers instant, accurate answers.</h2>
-      <p class="final-cta-sub">$1,500, fixed price, delivered in 21 days.</p>
+      <h2>See it answering your customers' questions.</h2>
+      <p class="final-cta-sub">Tell me about your site and I'll show you a preview. $1,500 fixed price to build it, delivered in 21 days.
+        <span class="confirm">[CONFIRM: what the free demo includes and how quickly you deliver it]</span></p>
       <form class="contact-form" id="contactForm" action="submit.php" method="post" novalidate>
         <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" maxlength="120" required>
-          <input type="email" name="email" placeholder="Your email" required>
+          <input type="text" name="name" placeholder="Your name" maxlength="120" required aria-label="Your name">
+          <input type="email" name="email" placeholder="Your email" required aria-label="Your email">
         </div>
-        <input type="text" name="company" placeholder="Company / website" maxlength="200">
-        <textarea name="message" placeholder="What do you want your chatbot to handle?" rows="3" maxlength="4000"></textarea>
+        <input type="text" name="company" placeholder="Company / website" maxlength="200" aria-label="Company or website">
+        <textarea name="message" placeholder="What do you want your chatbot to handle?" rows="3" maxlength="4000" aria-label="What do you want your chatbot to handle?"></textarea>
         <input type="text" name="_hp" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" class="btn-tech btn-primary-tech btn-block-tech">Get your chatbot — $1,500</button>
+        <button type="submit" class="btn-tech btn-primary-tech btn-block-tech">Get my free demo</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         <p class="recaptcha-disclosure">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
       </form>
-      <p class="final-cta-secondary">Need more than a Q&amp;A bot? <a href="#" id="bookCallFinal">Book a call →</a> for the RAG + Agentic Tooling tier.</p>
+      <p class="final-cta-secondary">Need more than a Q&amp;A bot? <a href="#contact" id="bookCallFinal">Book a call →</a> for the RAG + Agentic Tooling tier.</p>
+    </div>
+  </section>
+
+  <!-- 10. INSTAGRAM (compact link row, replaces the three tall embeds) -->
+  <section class="instagram" id="instagram">
+    <div class="container instagram-row">
+      <p class="instagram-text"><span class="section-kicker">// on instagram</span> Short breakdowns on RAG, agentic tooling, and what's shipping next.</p>
+      <a href="https://www.instagram.com/furqanaiengineer/" target="_blank" rel="noopener" class="btn-tech btn-outline-tech instagram-follow">Follow @furqanaiengineer →</a>
     </div>
   </section>
 
