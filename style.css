@@ -172,7 +172,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 20px;
 }
 .hero-copy h1 {
-  font-size: clamp(32px, 4.6vw, 52px);
+  font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -296,29 +296,45 @@ img { max-width: 100%; display: block; }
 .price-card .btn-tech { margin-top: auto; }
 .guarantee {
   margin-top: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-dim), var(--bg-raised));
+  padding: 36px 40px;
+  color: var(--text-dim);
+}
+.guarantee-badge {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: oklch(0.16 0.01 150);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+.guarantee-title { font-family: var(--font-mono); font-size: 14px; color: var(--accent); margin-bottom: 10px; }
+.guarantee-big { font-size: clamp(20px, 2.4vw, 26px); font-weight: 700; line-height: 1.3; color: var(--text); text-wrap: pretty; }
+.guarantee-note { margin-top: 14px; font-size: 16px; }
+.free-demo {
   border: 1px solid var(--accent);
   border-radius: var(--radius);
   background: var(--bg-raised);
-  padding: 24px 28px;
-  color: var(--text-dim);
-  font-size: 16px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
 }
-.guarantee-title { font-family: var(--font-mono); font-size: 14px; color: var(--accent); margin-bottom: 8px; }
-.care-plan {
-  margin-top: 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px 28px;
-}
-.care-kicker { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
-.care-title { font-size: 20px; font-weight: 700; margin-top: 4px; }
-.care-desc { color: var(--text-dim); font-size: 15px; margin-top: 6px; max-width: 560px; }
-.care-price { flex: none; }
-.capacity { margin-top: 20px; }
+.free-demo-tag { font-family: var(--font-mono); font-size: 13px; color: var(--accent); margin-bottom: 6px; }
+.free-demo h3 { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+.free-demo-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; color: var(--text-dim); font-size: 15px; }
+.free-demo-steps .how-num { display: block; margin-bottom: 4px; }
+.price-was { color: var(--text-faint); font-size: 28px; font-weight: 600; margin-right: 8px; }
+.price-now { color: var(--accent); }
+.capacity { margin: 0 0 20px; font-family: var(--font-mono); font-size: 14px; color: var(--accent); }
 
 /* ===== How it works ===== */
 .how { padding: 90px 0; border-top: 1px solid var(--border-soft); }
@@ -548,10 +564,11 @@ img { max-width: 100%; display: block; }
 .about-text { color: var(--text-dim); font-size: 17px; line-height: 1.65; margin-top: 18px; max-width: 560px; }
 
 /* ===== Instagram ===== */
-.instagram { padding: 36px 0; border-top: 1px solid var(--border-soft); }
-.instagram-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.instagram-text { color: var(--text-dim); font-size: 16px; margin: 0; }
-.instagram-text .section-kicker { display: block; margin-bottom: 4px; }
+.instagram { padding: 90px 0; border-top: 1px solid var(--border-soft); }
+.instagram-sub { color: var(--text-dim); font-size: 17px; max-width: 560px; margin-top: -28px; margin-bottom: 44px; }
+.instagram-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 36px; }
+.instagram-embed { background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; height: 600px; }
+.instagram-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
 .instagram-follow { display: inline-flex; }
 
 /* ===== FAQ ===== */
@@ -652,6 +669,9 @@ img { max-width: 100%; display: block; }
   .proof-grid { grid-template-columns: 1fr; }
   .about-inner { grid-template-columns: 1fr; }
   .about-photo { width: 160px; }
+  .instagram-grid { grid-template-columns: 1fr; }
+  .instagram-embed { height: 560px; max-width: 420px; margin: 0 auto; }
+  .free-demo-steps { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   .nav-toggle { display: flex; }
@@ -675,8 +695,10 @@ img { max-width: 100%; display: block; }
   .problem-grid { grid-template-columns: 1fr; }
   .how-steps { grid-template-columns: 1fr; }
   .price-card { padding: 28px 22px; }
-  .guarantee, .care-plan, .testimonial-slot { padding: 22px; }
-  .care-plan { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .guarantee, .testimonial-slot { padding: 22px; }
+  .guarantee { flex-direction: column; gap: 14px; }
+  .free-demo { padding: 22px; }
+  .instagram-embed { height: 520px; max-width: none; }
   .hero-actions .btn-tech { width: 100%; }
   .form-row { flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
