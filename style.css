@@ -746,3 +746,5 @@ img { max-width: 100%; display: block; }
 .ig-card-label { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
 .ig-card-text { font-size: 18px; font-weight: 600; line-height: 1.35; }
 .ig-card-cta { margin-top: auto; padding-top: 12px; font-family: var(--font-mono); font-size: 14px; color: var(--accent); font-weight: 600; }
+
+.instagram-feed { margin-bottom: 36px; min-height: 120px; }
