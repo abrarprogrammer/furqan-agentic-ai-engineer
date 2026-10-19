@@ -733,3 +733,16 @@ img { max-width: 100%; display: block; }
   .form-row { flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* Instagram link cards (no embeds, so no follower or like counts are shown) */
+.instagram-grid { align-items: stretch; }
+.ig-card {
+  display: flex; flex-direction: column; gap: 10px; padding: 28px;
+  background: var(--bg-raised); border: 1px solid var(--border); border-radius: var(--radius);
+  color: var(--text); text-decoration: none; transition: border-color 0.15s, transform 0.15s;
+}
+.ig-card:hover { border-color: var(--accent); transform: translateY(-2px); color: var(--text); }
+.ig-icon { color: var(--accent); }
+.ig-card-label { font-family: var(--font-mono); font-size: 13px; color: var(--text-faint); }
+.ig-card-text { font-size: 18px; font-weight: 600; line-height: 1.35; }
+.ig-card-cta { margin-top: auto; padding-top: 12px; font-family: var(--font-mono); font-size: 14px; color: var(--accent); font-weight: 600; }
