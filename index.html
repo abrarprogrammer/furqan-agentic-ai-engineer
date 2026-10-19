@@ -67,6 +67,42 @@
     </div>
   </section>
 
+  <!-- 3b. LOSS CALCULATOR -->
+  <section class="calc" id="calculator">
+    <div class="container">
+      <p class="section-kicker">// the cost</p>
+      <h2 class="section-title">What are unanswered leads costing you?</h2>
+      <p class="problem-sub">Slide each control to match your business. The starting values are examples only.</p>
+      <div class="calc-grid">
+        <form class="calc-form" id="lossCalc" onsubmit="return false">
+          <div class="calc-row">
+            <label for="calcLeads"><span>Website enquiries per month</span> <output id="outLeads" for="calcLeads"></output></label>
+            <input type="range" id="calcLeads" min="10" max="1000" step="10" value="100">
+          </div>
+          <div class="calc-row">
+            <label for="calcMissed"><span>Unanswered (after hours, slow replies)</span> <output id="outMissed" for="calcMissed"></output></label>
+            <input type="range" id="calcMissed" min="0" max="100" step="5" value="40">
+          </div>
+          <div class="calc-row">
+            <label for="calcClose"><span>Answered enquiries that become clients</span> <output id="outClose" for="calcClose"></output></label>
+            <input type="range" id="calcClose" min="0.5" max="10" step="0.5" value="2">
+          </div>
+          <div class="calc-row">
+            <label for="calcValue"><span>Average value of a client</span> <output id="outValue" for="calcValue"></output></label>
+            <input type="range" id="calcValue" min="1000" max="50000" step="500" value="9000">
+          </div>
+        </form>
+        <div class="calc-result" aria-live="polite">
+          <p class="calc-label">You may be losing</p>
+          <p class="calc-big"><span id="calcMonth">$0</span><span class="calc-unit"> / month</span></p>
+          <p class="calc-year"><span id="calcYear">$0</span> per year</p>
+          <p class="calc-detail" id="calcDetail"></p>
+          <a href="#contact" class="btn-tech btn-primary-tech">Stop the loss: get a free demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 2. LIVE DEMO (moved up under the hero) -->
   <section class="demo" id="demo">
     <div class="container">
@@ -115,42 +151,6 @@
         </div>
         <div class="problem-item">
           <p>Support handles the same questions on repeat instead of the hard ones.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3b. LOSS CALCULATOR -->
-  <section class="calc" id="calculator">
-    <div class="container">
-      <p class="section-kicker">// the cost</p>
-      <h2 class="section-title">What are unanswered leads costing you?</h2>
-      <p class="problem-sub">Slide each control to match your business. The starting values are examples only.</p>
-      <div class="calc-grid">
-        <form class="calc-form" id="lossCalc" onsubmit="return false">
-          <div class="calc-row">
-            <label for="calcLeads"><span>Website enquiries per month</span> <output id="outLeads" for="calcLeads"></output></label>
-            <input type="range" id="calcLeads" min="10" max="1000" step="10" value="100">
-          </div>
-          <div class="calc-row">
-            <label for="calcMissed"><span>Unanswered (after hours, slow replies)</span> <output id="outMissed" for="calcMissed"></output></label>
-            <input type="range" id="calcMissed" min="0" max="100" step="5" value="40">
-          </div>
-          <div class="calc-row">
-            <label for="calcClose"><span>Answered enquiries that become clients</span> <output id="outClose" for="calcClose"></output></label>
-            <input type="range" id="calcClose" min="0.5" max="10" step="0.5" value="2">
-          </div>
-          <div class="calc-row">
-            <label for="calcValue"><span>Average value of a client</span> <output id="outValue" for="calcValue"></output></label>
-            <input type="range" id="calcValue" min="1000" max="50000" step="500" value="9000">
-          </div>
-        </form>
-        <div class="calc-result" aria-live="polite">
-          <p class="calc-label">You may be losing</p>
-          <p class="calc-big"><span id="calcMonth">$0</span><span class="calc-unit"> / month</span></p>
-          <p class="calc-year"><span id="calcYear">$0</span> per year</p>
-          <p class="calc-detail" id="calcDetail"></p>
-          <a href="#contact" class="btn-tech btn-primary-tech">Stop the loss: get a free demo</a>
         </div>
       </div>
     </div>
