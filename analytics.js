@@ -13,8 +13,8 @@
 (function () {
   'use strict';
 
-  var GA_ID = '';
-  var CLARITY_ID = '';
+  var GA_ID = 'G-7GNR7TKF0B';
+  var CLARITY_ID = 'z3e47wig3o';
 
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
