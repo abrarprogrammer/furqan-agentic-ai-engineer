@@ -61,6 +61,7 @@ $(function () {
       }).done(function (res) {
         if (res && res.success) {
           $form[0].reset();
+          if (window.track) { window.track('generate_lead', { form: 'free_demo' }); }
           $status.addClass('is-success').text(res.message || 'Thanks — I\'ll be in touch shortly.');
         } else {
           $status.addClass('is-error').text((res && res.message) || 'Something went wrong. Please try again.');

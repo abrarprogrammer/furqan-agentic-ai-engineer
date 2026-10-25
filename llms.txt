@@ -1,0 +1,20 @@
+# Furqan: AI chatbots for real-estate websites
+
+> Furqan is an agentic AI engineer who builds fixed-price AI chatbots for real-estate websites in the United States. The chatbot answers visitor questions using only the business's own listings, neighborhood information and FAQs, so it does not invent prices or details.
+
+## Offer
+- Free demo: a working chatbot trained on about 30% of the site's data, delivered within 48 hours, no payment or commitment.
+- The 11pm Lead Catcher: $699 fixed price, live in 7 days. Trained on all listings, website, docs and FAQs, installed on the site, 3 rounds of revisions included.
+- Guarantee: 50 real customer questions are tested at launch. If fewer than 90% are answered correctly, it is fixed free until it passes, or the client is refunded.
+- Custom tier (RAG + agentic tooling): appointment booking, order status, CRM and internal-tool integration. Quoted after a short call.
+- Capacity: 5 new builds per month.
+
+## Pages
+- [Home: offer, pricing, process, proof, FAQ](https://furqandev.com/)
+- [Live demo: a chatbot trained on the site itself](https://furqandev.com/#demo)
+- [Request a free demo](https://furqandev.com/#contact)
+
+## Facts
+- Stack: Claude API, n8n, custom retrieval pipelines
+- Target market: real-estate businesses in the United States
+- Instagram: https://www.instagram.com/furqanaiengineer/

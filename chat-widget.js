@@ -84,7 +84,10 @@
     $send.prop('disabled', state);
   }
 
+  var chatTracked = false;
+
   function sendMessage(text) {
+    if (!chatTracked && window.track) { chatTracked = true; window.track('chat_started'); }
     setBusy(true);
     addMessage('user', text);
     var $typing = addTypingIndicator();
