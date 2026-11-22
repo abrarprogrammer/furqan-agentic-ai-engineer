@@ -200,21 +200,21 @@ img { max-width: 100%; display: block; }
   background: var(--bg-raised);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 16px;
-  max-width: 340px;
+  padding: 10px;
+  max-width: 300px;
   justify-self: end;
   width: 100%;
 }
-.hero-headshot {
+/* Portrait (9:16) demo video. Reserve the space up front so the page doesn't jump while it loads. */
+.hero-video {
+  display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: var(--radius);
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  background: #000;
+  border-radius: calc(var(--radius) - 2px);
 }
-.hero-card-meta { padding: 14px 4px 2px; }
-.hero-card-name { font-weight: 700; font-size: 18px; }
-.hero-card-role { font-family: var(--font-mono); font-size: 14px; color: var(--text-dim); margin-top: 2px; }
 
 /* ===== Problem ===== */
 .problem { padding: 90px 0; border-top: 1px solid var(--border-soft); }
@@ -692,7 +692,7 @@ img { max-width: 100%; display: block; }
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-card { justify-self: start; max-width: 260px; }
+  .hero-card { justify-self: start; max-width: 300px; }
   .pricing-grid { grid-template-columns: 1fr; gap: 36px; }
   .calc-grid { grid-template-columns: 1fr; }
   .how-steps { grid-template-columns: repeat(2, 1fr); }
